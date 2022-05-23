@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="form-style-2">
+<form style="display: flex; flex-wrap: wrap;" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" hidden="true">
+</form>
+</div>
+
+{% endblock %}

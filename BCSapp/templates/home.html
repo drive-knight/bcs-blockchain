@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<ul class="list-group">
+    {% for tx in page_obj %}
+    <div class="text" style="font-size: 150%;">
+        <a href="{% url 'tx-detail' tx.txid %}"> {{ tx.txid }}</a></div>
+    <p></p>
+</ul>
+    {% endfor %}
+
+<form action="." method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary btn-block">Отправить транзакцию</button>
+</form>
+
+{% for message in messages %}
+{{ message }}
+{% endfor %}
+{% endblock %}
