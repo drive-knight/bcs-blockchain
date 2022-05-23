@@ -62,7 +62,6 @@ def send_transaction():
     tx = create_tx(network=network, spendables=[spendables],
                    payables=[(new_address, ONE_COIN), (ADDRESS, calculate_commission)])
 
-    tx_hex = tx.as_hex()
     wif = network.parse.wif(PRIVATE_KEY)
     secret_exponent = wif.secret_exponent()
     solver_hash = build_hash160_lookup([secret_exponent], [secp256k1_generator])
