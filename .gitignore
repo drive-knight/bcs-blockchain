@@ -1,6 +1,5 @@
 # Django #
 __pycache__
-static/
 media
 .DS_Store
 
