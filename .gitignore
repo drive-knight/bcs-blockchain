@@ -2,7 +2,6 @@
 __pycache__
 static/
 media
-BCSapp/migrations
 .DS_Store
 
 
